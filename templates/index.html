@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Captioning</title>
+    <link rel="stylesheet" href="static/css/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <div class="product-name">
+        Caption<span class="product-name-inner">Craft</span>
+      </div>
+    </div>
+    <div class="super-container">
+        <form
+      method="post"
+      enctype="multipart/form-data"
+      class="parent-upload-container"
+    >
+      <h2>Upload an Image to Generate Caption</h2>
+      <div class="upload-container">
+        <img
+          src="static/images/upload1.png"
+          alt="Upload"
+          class="upload-image"
+          onclick="document.getElementById('file-input').click();"
+        />
+        <input type="file" id="file-input" class="file-input" name="file" />
+      </div>
+      <input type="submit" value="Generate Caption" class="upload-btn" />
+    </form>
+    <div class="generation-div">
+        <img class="preview-img" src="" id="preview" alt="">
+        {% if file_path %}
+        <img class="uploaded-image" src="{{file_path}}" id="preview" alt="">
+    <div class="generation-container">
+        <p>{{ caption }}</p>
+      </div>
+  
+      {% endif %}
+    </div>
+    </div>
+    
+
+    <script>
+      document
+        .getElementById("file-input")
+        .addEventListener("change", function (event) {
+        const file = event.target.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                const preview = document.getElementById('preview');
+                preview.src = e.target.result;
+                preview.style.display = 'block'
+            };
+
+            if (file) {
+                reader.readAsDataURL(file);
+            }
+        });
+
+    </script>
+  </body>
+</html>
