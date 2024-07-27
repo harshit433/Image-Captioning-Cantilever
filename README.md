@@ -3,6 +3,20 @@
 
 This project is a Flask web application that allows users to upload images and generate captions for them using a custom AI model. The model utilizes EfficientNet for the Convolutional Neural Network (CNN) component, a custom Long Short-Term Memory (LSTM) network, and a multihead attention layer. The model has an accuracy of 42%.
 
+## ScreenShots
+
+#### HomePage
+![img_cap1](https://github.com/user-attachments/assets/b7411d67-2267-454b-90ec-5fc4a4e38eb8)
+
+#### Upload Image
+![img_cap2](https://github.com/user-attachments/assets/df9f81ec-5216-4c07-afbd-fa6da4a027fa)
+
+#### Image Uploaded
+![img_cap3](https://github.com/user-attachments/assets/9da11943-a789-4ac3-ad60-c7751419718f)
+
+#### Image captioned
+![img_cap4](https://github.com/user-attachments/assets/5a6f959d-6785-4b67-9900-3e8a2e763567)
+
 ## Directory Structure
 ```markdown
 Image Captioning Project
