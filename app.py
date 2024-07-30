@@ -1,13 +1,9 @@
 from flask import Flask, request, render_template, redirect, url_for
 from PIL import Image
-from transformers import BlipProcessor, BlipForConditionalGeneration
 import prediction
 
 app = Flask(__name__)
 
-# Load pre-trained model and processor from Hugging Face
-processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-base")
-model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-base")
 
 def generate_caption(image_path):
     raw_image = Image.open(image_path).convert('RGB')
