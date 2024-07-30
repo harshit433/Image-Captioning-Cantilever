@@ -4,16 +4,6 @@ import prediction
 
 app = Flask(__name__)
 
-
-def generate_caption(image_path):
-    raw_image = Image.open(image_path).convert('RGB')
-    text = "a photography of"
-    inputs = processor(raw_image, text, return_tensors="pt")
-
-    out = model.generate(**inputs)
-    caption = processor.decode(out[0], skip_special_tokens=True)
-    return caption
-
 @app.route('/', methods=['GET', 'POST'])
 def index():
     if request.method == 'POST':
