@@ -1,7 +1,7 @@
 
 # Image Captioning Project
 
-This project is a Flask web application that allows users to upload images and generate captions for them using a custom AI model. The model utilizes EfficientNet for the Convolutional Neural Network (CNN) component, a custom Long Short-Term Memory (LSTM) network, and a multihead attention layer. The model has an accuracy of 42%.
+This project is a Flask web application that allows users to upload images and generate captions for them using a custom AI model. The model utilizes EfficientNet for the Convolutional Neural Network (CNN) component, a custom Long Short-Term Memory (LSTM) network, and a multihead attention layer. The model has an accuracy of 80%.
 
 ## ScreenShots
 
